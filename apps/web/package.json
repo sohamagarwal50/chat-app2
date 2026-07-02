@@ -11,8 +11,14 @@
     "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {
+    "@repo/common": "workspace:*",
+    "@repo/db": "workspace:*",
     "@repo/ui": "workspace:*",
+    "@types/jsonwebtoken": "^9.0.10",
+    "axios": "^1.18.1",
+    "jsonwebtoken": "^9.0.3",
     "next": "16.2.0",
+    "next-auth": "5.0.0-beta.31",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
