@@ -7,8 +7,13 @@ async function getId(slug : string) {
     return res.data.roomId;
 }
 async function getMessages(roomId : Number){
-    const messages = await axios.get("http://localhost:3001/chat/"+`${roomId}`)
-    return messages.data.messages;
+    try{
+        const messages = await axios.get("http://localhost:3001/chat/"+`${roomId}`)
+        return messages.data.messages;
+    }
+    catch(err){
+        console.log("error occured");
+    }
 }
 export default async function ChatRoom1({params} : {
     params : {slug : string}
